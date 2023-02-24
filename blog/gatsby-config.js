@@ -10,13 +10,13 @@
 module.exports = {
   siteMetadata: {
     title: `Gatsby Blog`,
-    description: `ITDEV-164 Gatsby Blog.`,
+    description: ` ITDEV-164 Gatsby Blog. `,
     author: `Matthew Jutrzonka`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     contact: {
       name: `Matthew Jutrzonka`,
       company: `Blogs Inc.`,
-      address: `PO Box 1234`
+      address: `PO BOX 1234`
     }
   },
   plugins: [
@@ -27,6 +27,13 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `wmnnnzmr8b2y`,
+        accessToken: `LqTIqKR3LBjcnWhIFRxqIcSIMogLzYoqa8xwadYAspU`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
